@@ -26,9 +26,9 @@ case "$platform" in
     ;;
 esac
 
-echo "will run with $CONFIG_OPTS"
+echo will run with $CONFIG_OPTS
 
-./bazel build //main:sorbet --strip=always "$CONFIG_OPTS"
+./bazel build //main:sorbet --strip=always $CONFIG_OPTS
 
 if [ "$kernel_name" != "darwin" ]; then
   cp bazel-bin/main/sorbet sorbet_bin
